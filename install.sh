@@ -172,6 +172,8 @@ install_theme() {
       else
         sed -i "s/#5294e2/${theme_color}/g" "${THEME_DIR}/scalable/devices/"*.svg "${THEME_DIR}/32/devices/"*.svg
       fi
+    else
+      cp -r "${SRC_DIR}"/src/scalable/apps-colorscheme/*.svg                     "${THEME_DIR}/scalable/apps"
     fi
 
     cp -r "${SRC_DIR}"/links/{16,22,24,32,scalable,symbolic}                     "${THEME_DIR}"
@@ -207,6 +209,7 @@ install_theme() {
     ln -sr "${STD_THEME_DIR}/16/places"                                          "${THEME_DIR}/16/places"
     ln -sr "${STD_THEME_DIR}/16/status"                                          "${THEME_DIR}/16/status"
     ln -sr "${STD_THEME_DIR}/22/actions"                                         "${THEME_DIR}/22/actions"
+    ln -sr "${STD_THEME_DIR}/22/categories"                                      "${THEME_DIR}/22/categories"
     ln -sr "${STD_THEME_DIR}/22/devices"                                         "${THEME_DIR}/22/devices"
     ln -sr "${STD_THEME_DIR}/22/emblems"                                         "${THEME_DIR}/22/emblems"
     ln -sr "${STD_THEME_DIR}/22/mimetypes"                                       "${THEME_DIR}/22/mimetypes"
@@ -254,6 +257,7 @@ install_theme() {
     ln -sr "${STD_THEME_DIR}/16/mimetypes"                                       "${THEME_DIR}/16/mimetypes"
     ln -sr "${STD_THEME_DIR}/16/panel"                                           "${THEME_DIR}/16/panel"
     ln -sr "${STD_THEME_DIR}/16/status"                                          "${THEME_DIR}/16/status"
+    ln -sr "${STD_THEME_DIR}/22/categories"                                      "${THEME_DIR}/22/categories"
     ln -sr "${STD_THEME_DIR}/22/emblems"                                         "${THEME_DIR}/22/emblems"
     ln -sr "${STD_THEME_DIR}/22/mimetypes"                                       "${THEME_DIR}/22/mimetypes"
     ln -sr "${STD_THEME_DIR}/22/panel"                                           "${THEME_DIR}/22/panel"
